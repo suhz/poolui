@@ -16,7 +16,7 @@ angular.module('utils.strings', [])
     if (hashes > 1000) {
       return parseFloat((hashes / 1000).toFixed(2)) + " KH/s"
     }
-    return parseFloat( hashes || 0 ) + " H/s"
+    return ( hashes || 0 ) + " H/s"
   };
 })
 
