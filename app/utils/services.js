@@ -119,6 +119,9 @@ angular.module('utils.services', [])
             x: {
               key: "ts",
               type: "date"
+            },
+            y: {
+              min: 0
             }
           }
         },
