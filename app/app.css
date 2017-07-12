@@ -7,8 +7,6 @@ rgb(225,225,225) mercury
 rgb(235,235,235) gallery
 */
 
-@media(min-width: 420)
-
 html, body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size:14px;
