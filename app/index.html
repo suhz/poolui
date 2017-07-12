@@ -91,17 +91,17 @@
 
         <md-content flex id="main">
           <md-toolbar class="navbar md-whiteframe-2dp">
-            <div class="md-toolbar-tools maintoolbar" ng-class="{smallfont: !menuOpen}" layout="row">
+            <div class="md-toolbar-tools maintoolbar" layout="row">
               <md-button class="md-icon-button" type="button" ng-click="toggleSidenav()">
                 <md-icon md-font-set="material-icons">menu</md-icon>
               </md-button>
-              <span flex><a href="#/dashboard">Network : <b>{{network.difficulty | difficultyToHashRate | toHashRate}}</b></a></span>
-              <span flex><a href="#/dashboard">Pool : <b>{{poolStats.global.hashRate | toHashRate}}</b></a></span>
-              <span flex><a href="#/dashboard">You : <b>{{yourTotalHashRate | toHashRate}}</b></a></span>
+              <span class="flex">Network <b>{{network.difficulty | difficultyToHashRate | toHashRate}}</b></a></span>
+              <span class="flex">Pool <b>{{poolStats.global.hashRate | toHashRate}}</b></a></span>
+              <span class="flex"><a href="#/dashboard">You <b>{{yourTotalHashRate | toHashRate}}</b></a></span>
               <div>
                 <md-button class="md-raised md-accent" aria-label="Miner Login" ng-click="minerLogin($event)" ng-if="!isLoggedIn()">
-                  <md-icon class="login">fingerprint</md-icon>
-                  Setup
+                  <md-icon class="login">settings</md-icon>
+                  <span class="setup-text">Setup</span>
                 </md-button>
                 <md-button class="md-fab md-mini md-warn" aria-label="Miner Login" ng-click="minerConsole($event)" ng-if="isLoggedIn()">
                   <md-icon class="login">build</md-icon>
@@ -110,9 +110,9 @@
             </div>
           </md-toolbar>
           <div id="content" ng-view flex></div>
-		<div class="text-center">
-		<p style="font: 90% arial, sans-serif;">powered by <strong><a href="https://github.com/Snipa22/nodejs-pool"><i class="fa fa-github"></i> nodejs-pool</a></strong> &amp; <strong><a href="https://github.com/mesh0000/poolui"><i class="fa fa-github"></i> poolui</a></strong></br> <span style="font-size: 90%">(mod by <b>miziel</b>)</span>
-		</p></div>
+		<div class="footer">
+		powered by <strong><a href="https://github.com/Snipa22/nodejs-pool"><i class="fa fa-github"></i> nodejs-pool</a></strong> &amp; <strong><a href="https://github.com/mesh0000/poolui"><i class="fa fa-github"></i> poolui</a></strong></br> <span style="font-size: 90%">(mod by <b>miziel</b>)</span>
+		</div>
         </md-content>
       </div>
       <!-- Scripts -->
