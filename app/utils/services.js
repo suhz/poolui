@@ -122,7 +122,7 @@ angular.module('utils.services', [])
             },
             y: {
               min: 0
-            }
+		    }
           }
         },
         table_selected: [],

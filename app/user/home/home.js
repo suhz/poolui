@@ -12,8 +12,31 @@ app.controller('HomeCtrl', function($scope, $route, dataService, timerService) {
             $scope.poolHashrateChart = {
                 datasets: { global: data },
                 options: {
+/*				    scales: {
+						yAxes: [{
+							ticks: {
+								suggestedMin: 50,
+								suggestedMax: 10000000
+							}
+						}]
+					},
+					tooltips: {
+						enabled: true,
+						mode: 'single',
+						callbacks: {
+							label: function(tooltipItems, data) { 
+							return tooltipItems.yLabel + ' €';
+							}
+						}
+					},*/
                     series: [
-                        {"axis":"y","id":"global","dataset":"global","label":"Total Pool Hashrate","key":"hs","color":"green","type":["line","area"]}
+                        {"axis":"y",
+						 "id":"global",
+						 "dataset":"global",
+						 "label":"Total Pool Hashrate",
+						 "key":"hs",
+						 "color":"red",
+						 "type":["line","area"]}
                     ],
                     allSeries: [],
                     axes: {

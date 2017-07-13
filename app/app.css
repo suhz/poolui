@@ -7,14 +7,12 @@ rgb(225,225,225) mercury
 rgb(235,235,235) gallery
 */
 
-@media(min-width: 420)
-
 html, body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size:14px;
   margin: 0px;
   padding: 0px;
-  min-width: 377px;
+  min-width: 360px;
 }
 
 a {
@@ -47,6 +45,10 @@ md-card {
   background-color: rgb(215, 215, 215);
 }
 
+.md-headline {
+    font-size: 20px;
+}
+
 md-sidenav {
 	max-width: 220px;
 	min-width: 220px;
@@ -58,7 +60,8 @@ md-toolbar {
 }
 
 .md-button {
-	min-width: 36px; 
+	min-width: 36px;
+	vertical-align: middle;
 }
 
 .material-icons {
@@ -71,15 +74,11 @@ md-toolbar {
 
 .maintoolbar {
   background-color: rgb(0, 130, 130); 
-}
+  color: rgb(255, 255, 255);
+ }
 
 .maintoolbar span {
-	color: rgb(255, 255, 255);
-	font-size: 80%
-}
-
-.maintoolbar span b{
-	font-size: 100%
+  font-size: 20px;
 }
 
 .statsbar md-card-title-text{
@@ -166,9 +165,18 @@ md-tooltip .md-content {
   color: rgb(255, 255, 255) !important;
   font-size: 20px;
 }
+
+.setup-text {
+	font-weight: 600;
+}
+
 @media (max-width: 400px) {
 	.setup-text {
 		display: none;
+	}
+	
+	.maintoolbar span {
+		font-size: 14px;
 	}
 }	
 
@@ -286,13 +294,24 @@ md-tooltip .md-content {
 }
 
 /* LOGIN WINDOW */
-md-dialog .login{
-  min-width: 100% !important;
+md-dialog .login {
+  min-width: 800px;
 }
 
 .console {
-  height: 300px;
-  min-width: 377px;
+		height: 300px;
+		min-width: 500px;
+	}
+
+@media (max-width: 600px) {
+	.console {
+		height: 300px;
+		min-width: 100%;
+	}
+	
+	md-dialog .login {
+		min-width: 100% !important;
+	}
 }
 
 .no-padding {
