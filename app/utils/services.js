@@ -76,6 +76,7 @@ angular.module('utils.services', [])
       // Get miner worker ids
       dataService.getData("/miner/"+key+"/identifiers", function(minerIDs){
         addrStats[key].ids = minerIDs;
+        addrStats[key].ids.sort(); // Sort by miner id
       });
 
       dataService.getData("/miner/"+key+"/stats/allWorkers", function(workerStats){
