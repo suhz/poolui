@@ -2,7 +2,7 @@
 <div layout="column" layout-gt-sm="row" flex>
 	<md-card flex>
 		<md-card-title>
-			<span class="md-headline">Historical Pool Hashrate</span>
+			<span class="md-headline">Pool Hashrate</span>
 		</md-card-title>
 		<md-card-content layout="column">
 			<div class="chartcontainer-pool" flex>
@@ -13,11 +13,11 @@
 
 	<md-card flex>
 		<md-card-title>
-			<span class="md-headline">Historical Pool Miners</span>
+			<span class="md-headline">Block Effort (last 25 blocks)</span>
 		</md-card-title>
 		<md-card-content layout="column">
 			<div class="chartcontainer-pool" flex>
-				<linechart data="poolMinersChart.datasets" options="poolMinersChart.options"></linechart>
+				<linechart data="poolEffortChart.datasets" options="poolEffortChart.options"></linechart>
 			</div>
 		</md-card-content>
 	</md-card>
