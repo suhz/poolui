@@ -6,6 +6,7 @@ vendor/
 tmp
 .DS_Store
 .idea
+package-lock.json
 app/vendor/
 build/
 app/globals.js
