@@ -15,12 +15,12 @@
 			          <label>Choose your hardware</label>
 			          <md-icon class="material-icons">computer</md-icon>
 			          <md-select name="type" ng-model="example_attr['with_custom_port']" ng-change="updateExample()" required="">
-			            <md-option value="3333">Low-End CPUs (Up to 50 h/s)</md-option>
-			            <md-option value="5555">Medium-End CPUs (Up to 160 h/s)</md-option>
-			            <md-option value="7777">High-End Graphics Cards (Up to 800 h/s)</md-option>
-			            <md-option value="9000">Claymore SSL</md-option>
-				    <md-option value="80">Firewall bypass</md-option>
-				    <md-option value="443">Firewall bypass SSL</md-option>
+			            <md-option value="3333">Port 3333 (Low-End CPUs)</md-option>
+			            <md-option value="5555">Port 5555 (Fast CPUs)</md-option>
+			            <md-option value="7777">Port 7777 (GPU rigs)</md-option>
+			            <md-option value="9000">Port 9000 (Claymore SSL)</md-option>
+				    <md-option value="80">Port 80 (Firewall bypass)</md-option>
+				    <md-option value="443">Port 443 (Firewall bypass SSL)</md-option>
 			          </md-select>
 			        </md-input-container>
 			            
@@ -78,10 +78,10 @@
 			<h3>Example configuration for <a href="https://bitcointalk.org/index.php?topic=638915.0" target="_blank">Claymore's CryptoNote GPU Miner</a>:</h3>
 			<div class="md-body-1 code-snippet" layout='row' flex>
 					<code class='code-snippet'>      
-          -o stratum+ssl://{{ example_config['pool_address'] }}</br>
+          -o stratum+tcp://{{ example_config['pool_address'] }}</br>
           -u {{ example_config['username'] }}</br>
           -p {{ example_config['password'] }}</br>
-					</code>
+					</code><br>For SSL use stratum+ssl://
 			</div> 
       <br>
 </md-card-content>
