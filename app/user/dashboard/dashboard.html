@@ -198,11 +198,10 @@
 								<td md-cell><p class="md-body-2">{{$index + 1}}</p></td>
 								<td md-cell><p class="md-body-2">{{id}}</p></td>
 								<td md-cell><p class="md-body-2">{{minerStats[addr].dataset[id][0].hs | toHashRate}}</p></td>
-								<td md-cell><p class="md-body-2">{{addrStats[addr].workerStats[id].totalHash | number}}</p></td>
 								<td md-cell><p class="md-body-2">{{minerStats[addr].dataset[id].avghshour | toHashRate}}</p></td>
                                                                 <td md-cell><p class="md-body-2">{{minerStats[addr].dataset[id].avghstfhour | toHashRate}}</p></td>
-								<td md-cell>
-									<span class="md-body-2" am-time-ago="minerStats[addr].dataset[id][0].ts"></span>
+								<td md-cell><p class="md-body-2">{{addrStats[addr].workerStats[id].totalHash | number}}</p></td>
+								<td md-cell><span class="md-body-2" am-time-ago="minerStats[addr].dataset[id][0].ts"></span>
 									<md-tooltip>
 										{{minerStats[addr].dataset[id][0].ts | date: 'HH:mm:ss dd/MM/yy'}}
 									</md-tooltip>
