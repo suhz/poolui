@@ -157,7 +157,7 @@
 			<div flex layout="column" layout-md="row" layout-gt-md="row" class="text-center">
 				<div flex layout="column" layout-gt-xs="row">
 					<div flex>
-						<h4> Hash Rate<h2>{{miner.hash | toHashRate}}</h2></h4>
+						<h4> Hash Rate (24h Avg)<h2>{{miner.hash | toHashRate}} ({{minerStats[addr].dataset['global'].avghstfhour | toHashRate}})</h2></h4>
 					</div>
 					<div flex>
 						<h4> Total Hashes<h2>{{miner.totalHashes | number}}</h2></h4>
@@ -192,9 +192,12 @@
 						</thead>
 						<tbody md-body>
 							<tr md-row ng-repeat="(index, id) in addrStats[addr].ids" md-select="id" data-md-on-select="updateCharts" md-on-deselect="updateCharts">
+								<td md-cell><p class="md-body-2">{{$index + 1}}</p></td>
 								<td md-cell><p class="md-body-2">{{id}}</p></td>
 								<td md-cell><p class="md-body-2">{{minerStats[addr].dataset[id][0].hs | toHashRate}}</p></td>
 								<td md-cell><p class="md-body-2">{{addrStats[addr].workerStats[id].totalHash | number}}</p></td>
+								<td md-cell><p class="md-body-2">{{minerStats[addr].dataset[id].avghshour | toHashRate}}</p></td>
+                                                                <td md-cell><p class="md-body-2">{{minerStats[addr].dataset[id].avghstfhour | toHashRate}}</p></td>
 								<td md-cell>
 									<span class="md-body-2" am-time-ago="minerStats[addr].dataset[id][0].ts"></span>
 									<md-tooltip>
