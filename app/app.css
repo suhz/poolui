@@ -17,11 +17,11 @@ html, body {
 
 a {
   transition: color .4s;
-  color: rgb(0, 130, 130); 
+  color: rgb(0, 130, 130);
 }
 
 a:link { text-decoration: none; },
-a:visited { color: rgb(255, 160, 0); } 
+a:visited { color: rgb(255, 160, 0); }
 a:hover   { color: rgb(255, 160, 0); }
 a:active  {
   transition: color .3s;
@@ -32,13 +32,13 @@ a:active  {
 	 font-weight: bold;
 	 font-size: 110%;
  }
- 
+
  .footer {
 	 text-align: center;
 	 font-size: 90%;
 	 padding-bottom: 40px;
  }
- 
+
 /*** Material Styles ***/
 md-card {
   overflow: hidden;
@@ -68,11 +68,11 @@ md-toolbar {
 }
 
 #main {
-  background: rgb(240, 240, 240); 
+  background: rgb(240, 240, 240);
 }
 
 .maintoolbar {
-  background-color: rgb(0, 130, 130); 
+  background-color: rgb(0, 130, 130);
   color: rgb(255, 255, 255);
  }
 
@@ -136,7 +136,7 @@ md-tooltip .md-content {
 .sidebar {
   display: flex;
   flex-wrap: nowrap;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .sidebar a {
@@ -147,7 +147,7 @@ md-tooltip .md-content {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0;
-  opacity: 0.87; 
+  opacity: 0.87;
 }
 
 .sidebar md-icon, .sidebar ng-md-icon {
@@ -160,7 +160,7 @@ md-tooltip .md-content {
 }
 
 .logo {
-  background: rgb(30,30,30) !important;
+  background: rgb(44,55,66) !important;
   color: rgb(255, 255, 255) !important;
   font-size: 20px;
 }
@@ -174,11 +174,11 @@ md-tooltip .md-content {
 	.setup-text {
 		display: none;
 	}
-	
+
 	.maintoolbar span {
 		font-size: 14px;
 	}
-}	
+}
 
 /* HELPERS */
 .welcome p {
@@ -231,7 +231,7 @@ md-tooltip .md-content {
 }
 .frac span.symbol {
     display: none;
-} 
+}
 
 .hide-error-msg .md-errors-spacer{
   display: none
@@ -309,7 +309,7 @@ md-dialog .login {
 		height: 300px;
 		min-width: 100%;
 	}
-	
+
 	md-dialog .login {
 		min-width: 100% !important;
 	}
